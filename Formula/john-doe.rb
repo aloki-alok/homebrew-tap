@@ -1,11 +1,15 @@
-# Install:  brew tap aloki-alok/tap && brew install --HEAD john-doe
-# Upgrade:  brew upgrade --fetch-HEAD john-doe
+# Install:  brew tap aloki-alok/tap && brew install john-doe
+# Upgrade:  brew upgrade john-doe   (bump the tag/revision below on each release)
 #
-# HEAD-only for now (installs latest main); a versioned URL is added once a tagged release
-# is cut. The private source is cloned with your own GitHub credentials.
+# The private source is cloned with your own GitHub credentials.
 class JohnDoe < Formula
   desc "Private assistant that talks to you and takes scoped actions on your machine"
   homepage "https://github.com/aloki-alok/john-doe"
+  url "https://github.com/aloki-alok/john-doe.git",
+      using:    :git,
+      tag:      "v0.0.1",
+      revision: "921a7b1ce2870a1f200dd13833df317ca56491b5"
+  version "0.0.1"
   head "https://github.com/aloki-alok/john-doe.git", branch: "main"
 
   depends_on "uv"
