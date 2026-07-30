@@ -1,24 +1,24 @@
 cask "mcpify" do
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     on_intel do
-      sha256 "d31e8d7a7c46ef23f1a026fd2123a99fdab8556982aeb13a7639e94ac02bc092"
+      sha256 "1259e9bb27cec6a3879ad46175f04e1a635f4b2fe602de838fdd67ea52078471"
       url "https://github.com/aloki-alok/mcpify/releases/download/v#{version}/mcpify_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "a5f929a04ee1f40dfd0f747b5d51dff425207d2db3d86c9cb5c391dc8ffad8bf"
+      sha256 "a6b7efb72de9990c979e5e9eb49d5e6e3eb3b1ccb5413754cb9f482f7c68e25d"
       url "https://github.com/aloki-alok/mcpify/releases/download/v#{version}/mcpify_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "1dea8b89a3aa100c768b494fda0fb00e336af043f5defdc309d32f2e700b77eb"
+      sha256 "2240cecf37a8c799067e7d1626d455728f1c7e92e9821522b54825e8059fe493"
       url "https://github.com/aloki-alok/mcpify/releases/download/v#{version}/mcpify_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "a1b46ee510f01d0e08a3718664ace0ed3fe6b41703d651dbec72a342dde74940"
+      sha256 "db7ec2dcf59e78acc34141be9ca6a8addff6de639437015e3b51ad536d1b1190"
       url "https://github.com/aloki-alok/mcpify/releases/download/v#{version}/mcpify_linux_arm64.tar.gz"
     end
   end
