@@ -2,9 +2,9 @@ class HandyPalette < Formula
   desc "Kaomoji and emoji picker with clipboard history for macOS"
   homepage "https://github.com/aloki-alok/handy-palette"
   url "https://github.com/aloki-alok/handy-palette.git",
-      using: :git,
-      tag:   "v0.1.0"
-  version "0.1.0"
+      using:    :git,
+      tag:      "v0.1.0",
+      revision: "7d2fac4e3d339f58fc044fefeb5aab1d5149f36d"
   license "MIT"
   head "https://github.com/aloki-alok/handy-palette.git", branch: "main"
 
