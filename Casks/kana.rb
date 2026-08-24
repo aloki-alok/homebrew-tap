@@ -1,6 +1,6 @@
 cask "kana" do
-  version "0.3.3"
-  sha256 "8240b89150084eb27e2b50ecfc59946988664be06ca1c192cb98be340afc9227"
+  version "0.3.4"
+  sha256 "98b7d156361e8509720f5e50caf9b662336f963b854cc9d4215944ba505dca95"
 
   url "https://github.com/aloki-alok/kana/releases/download/v#{version}/Kana-#{version}-arm64.zip"
   name "Kana"
