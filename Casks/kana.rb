@@ -20,10 +20,8 @@ cask "kana" do
 
   # The community build is ad-hoc signed rather than notarized, so clear the
   # download flag the same way the other casks in this tap do.
-  postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status.zero?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Kana.app"]
-    end
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Kana.app"], must_succeed: false
   end
 
   zap trash: [
