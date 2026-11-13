@@ -33,10 +33,9 @@ cask "mcpify" do
 
   binary "mcpify"
 
-  postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mcpify"]
-    end
+  # The binary isn't notarized, so Gatekeeper blocks it until the download flag is cleared.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/mcpify"], must_succeed: false
   end
 
   # No zap stanza required
